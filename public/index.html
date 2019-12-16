@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebSockets 101</title>
+
+        <!-- websocket -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+        <!-- jquery + Draggable -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Css stuff -->
+        <link href="/chat.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <!-- draggable click script -->
+        <script>
+        $( function() {
+          $( ".draggable" ).draggable();
+        } );
+        </script>
+
+    </head>
+    <body>
+
+<!-- instructions / legend -->
+  <img class="draggable" src="Legend.png" style="mix-blend-mode: darken;" ondblclick="myDblFunction()"></img>
+
+
+<div id="#newstuff">
+</div>
+
+          <!-- Chat Zone -->
+        <div id="mario-chat" class="draggable">
+
+
+            <!-- <h2>Mario Chat</h2> -->
+            <div id="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Handle" />
+            <input id="message" type="text" placeholder="Message" />
+            <input id="media" type="text" placeholder="Media" />
+            <button id="send">Send</button>
+        </div>
+
+
+
+<!-- Soundzone -->
+<div class="draggable soundbox">
+<iframe id="sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202698786&color=%2300ff57&inverse=false&auto_play=false&show_user=true"></iframe>
+</div>
+<div class="draggable soundbox">
+<iframe id="sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202698786&color=%2300ff57&inverse=false&auto_play=false&show_user=true"></iframe>
+</div>
+<div class="draggable soundbox">
+<iframe id="sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202698786&color=%2300ff57&inverse=false&auto_play=false&show_user=true"></iframe>
+</div>
+<div class="draggable" style="padding:20px;background-color:yellow;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TvbpQx-dQfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<!-- double click function -->
+<script type="text/javascript">
+  function myDblFunction(){
+    console.log("dbl function");
+  }
+</script>
+    </body>
+    <script src="/chat.js"></script>
+</html>
